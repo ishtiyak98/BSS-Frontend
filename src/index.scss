@@ -1,0 +1,17 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,500;0,600;0,800;1,700&display=swap');
+
+@font-face {
+    font-family: "VerveineRegular";
+    src: url("/src/assets/font/VerveineRegular.TTF");
+}
+
+
+.hand-font{
+    font-family: "VerveineRegular";
+    color: green;
+}
+
