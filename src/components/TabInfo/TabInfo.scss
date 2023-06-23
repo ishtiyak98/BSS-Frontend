@@ -1,15 +1,75 @@
-.tab-info-container{
-    width: 1200px;
-    margin: 0 auto;
+@import "../../responsive.scss";
 
-    .title{
-        font-family: "VerveineRegular";
-        font-size: 72px;
-        color: #004C45;
+.tab-info-container {
+//   max-width: 1200px;
+//   margin: 0 auto;
+//   padding: 0px 160px;
+
+  .title {
+    font-family: "VerveineRegular";
+    font-size: 72px;
+    color: #004c45;
+    padding: 0px 0px;
+
+    @include lg{
+        padding: 0px 160px;
+    }
+  }
+
+  .para-text {
+    font-family: "Open Sans", sans-serif;
+    font-size: 16px;
+    padding: 0px 0px;
+
+    @include lg{
+        padding: 0px 160px;
+    }
+  }
+
+  .tab-title-container {
+    display: flex;
+    justify-content: space-between;
+    padding: 0px 0px;
+
+    @include lg{
+        padding: 0px 160px;
     }
 
-    .para-text{
-        font-family: 'Open Sans', sans-serif;
-        font-size: 16px;
+    .react-tabs__tab {
+      width: 280px;
+      color: #9497a2;
+      font-size: 22px;
+      font-weight: 500;
+      text-align: center;
+      padding-bottom: 8px;
+      cursor: pointer;
+      border: none z;
+      border-bottom: 4px solid #9497a2;
+      outline: none;
+      -webkit-user-select: none; /* Safari */
+      -ms-user-select: none; /* IE 10 and IE 11 */
+      user-select: none; /* Standard syntax */
     }
+    .react-tabs__tab--selected {
+      color: #00bfb2;
+      border-bottom: 4px solid #00bfb2;
+      border-radius: 0px;
+    }
+  }
+
+  .react-tabs__tab-panel {
+    background-color: #F3F5F8;
+    padding: 0px 0px;
+
+    @include lg{
+        padding: 0px 160px;
+    }
+    div{
+        padding: 0px 0px;
+
+        @include lg{
+            padding: 30px 0px;
+        }
+    }
+  }
 }
