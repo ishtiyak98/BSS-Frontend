@@ -1,14 +1,19 @@
 import React from "react";
 import { Tab, Tabs, TabList, TabPanel } from "react-tabs";
-
+import TabImgLg from "../../assets/img/info-lg.png";
+import TabImgSm from "../../assets/img/info-sm.png";
+import { Swiper, SwiperSlide } from "swiper/react";
+import "swiper/css";
+import "swiper/css/pagination";
+import { Pagination } from "swiper";
 import "./TabInfo.scss";
 
 function TabInfo() {
   return (
-    <section className="tab-info-container">
-      <h2 className="title">What are clinical trials?</h2>
+    <section className="tab">
+      <h2 className="tab__title">What are clinical trials?</h2>
 
-      <p className="para-text">
+      <p className="tab__text">
         Clinical Trials are medical research studies that help to find out
         whether a treatment works and is safe for use before it can be
         distributed to the whole population. Regulatory agencies review the
@@ -18,21 +23,53 @@ function TabInfo() {
         protect the rights of anyone taking part in a trial.
       </p>
       <br />
-      <p className="para-text">
+      <p className="tab__text">
         There are four main phases of clinical studies:
       </p>
       <br />
-      <div className="tab-container">
+      <div>
         <Tabs>
-          <TabList className="tab-title-container">
-            <Tab>Phase 1</Tab>
-            <Tab>Phase 2</Tab>
-            <Tab>Phase 3</Tab>
-            <Tab>Phase 4</Tab>
-          </TabList>
+          <Swiper
+            slidesPerView={1}
+            spaceBetween={30}
+            pagination={{
+              clickable: true,
+            }}
+            modules={[Pagination]}
+            className="mySwiper"
+          >
+            <TabList className="tab__title__container">
+              <Tab>Phase 1</Tab>
+              <Tab>Phase 2</Tab>
+              <Tab>Phase 3</Tab>
+              <Tab>Phase 4</Tab>
+            </TabList>
+          </Swiper>
 
           <TabPanel>
-            <div>Any content 1</div>
+            <div className="tabInfo">
+              <p className="tabInfo__text">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus
+                enim quas voluptatum aliquam eius commodi. Dicta vitae
+                consectetur ducimus aliquid mollitia, reprehenderit quo nisi
+                laborum officiis Minus eum debitis vel ipsum accusamus dolorum
+                vero quisquam atque. Voluptas repellendus repellat possimus
+                tempore, quisquam numquam nihil. Nemo, adipisci libero! Minus
+                eum debitis vel ipsum accusamus.
+              </p>
+              <div className="tabInfo__Img">
+                <img
+                  src={TabImgLg}
+                  alt="tabInfoImgLg"
+                  className="hidden lg:block tabInfo__Img--lg"
+                />
+                <img
+                  src={TabImgSm}
+                  alt="tabInfoImgSm"
+                  className="block lg:hidden tabInfo__Img--sm"
+                />
+              </div>
+            </div>
           </TabPanel>
           <TabPanel>
             <div>Any content 2</div>
