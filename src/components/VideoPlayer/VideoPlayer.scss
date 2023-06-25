@@ -1,18 +1,20 @@
 @import "../../responsive.scss";
 
 .videoPlayer {
-  padding: 80px 10px;
+  padding: 80px 0px 20px 0px;
 
   @include lg {
-    padding: 80px 160px;
+    padding: 80px 160px 40px 160px;
   }
   .videoPlayer__title {
     font-family: "VerveineRegular";
     font-size: 38px;
     color: #004c45;
+    padding: 0px 10px;
 
     @include lg {
       font-size: 72px;
+      padding: 0px 0px;
     }
   }
 
@@ -20,6 +22,11 @@
     font-family: "Open Sans", sans-serif;
     font-size: 16px;
     margin-bottom: 20px;
+    padding: 0px 10px;
+
+    @include lg {
+      padding: 0px 0px;
+    }
   }
 
   .videoPlayer__carousel {
@@ -49,6 +56,7 @@
           transform: translate(-50%, -50%);
           width: 50px;
           height: 50px;
+          cursor: pointer;
 
           @include lg {
             width: 100px;
@@ -60,9 +68,12 @@
       &__text {
         height: 100%;
         width: 100%;
+        font-family: "Open Sans", sans-serif;
         font-size: 16px;
         color: white;
-        padding: 0px 20px;
+        padding: 40px 10px;
+
+        @apply space-y-4;
 
         @include lg {
           width: 25%;
@@ -71,7 +82,11 @@
       }
     }
 
-    //!============= carousel library classes =============
+    //!============= Carousel Library Classes =============
+    .carousel-dots li.carousel-dots-active button::before {
+      color: #00bfb2;
+    }
+
     .carousel-prev {
       display: none;
     }
