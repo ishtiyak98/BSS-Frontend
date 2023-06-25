@@ -2,17 +2,12 @@ import React from "react";
 import { Tab, Tabs, TabList, TabPanel } from "react-tabs";
 import TabImgLg from "../../assets/img/info-lg.png";
 import TabImgSm from "../../assets/img/info-sm.png";
-import { Swiper, SwiperSlide } from "swiper/react";
-import "swiper/css";
-import "swiper/css/pagination";
-import { Pagination } from "swiper";
 import "./TabInfo.scss";
 
 function TabInfo() {
   return (
     <section className="tab">
       <h2 className="tab__title">What are clinical trials?</h2>
-
       <p className="tab__text">
         Clinical Trials are medical research studies that help to find out
         whether a treatment works and is safe for use before it can be
@@ -29,22 +24,12 @@ function TabInfo() {
       <br />
       <div>
         <Tabs>
-          <Swiper
-            slidesPerView={1}
-            spaceBetween={30}
-            pagination={{
-              clickable: true,
-            }}
-            modules={[Pagination]}
-            className="mySwiper"
-          >
-            <TabList className="tab__title__container">
-              <Tab>Phase 1</Tab>
-              <Tab>Phase 2</Tab>
-              <Tab>Phase 3</Tab>
-              <Tab>Phase 4</Tab>
-            </TabList>
-          </Swiper>
+          <TabList className="tab__title__container">
+            <Tab>Phase 1</Tab>
+            <Tab>Phase 2</Tab>
+            <Tab>Phase 3</Tab>
+            <Tab>Phase 4</Tab>
+          </TabList>
 
           <TabPanel>
             <div className="tabInfo">
