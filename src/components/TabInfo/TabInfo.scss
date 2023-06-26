@@ -109,6 +109,10 @@
         &--sm {
           width: 50%;
           margin: 0 auto;
+
+          @include md {
+            width: 30%;
+          }
         }
       }
     }
