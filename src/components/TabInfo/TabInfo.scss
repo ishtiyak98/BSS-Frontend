@@ -1,6 +1,10 @@
 @import "../../responsive.scss";
 
 .tab {
+  @include lg {
+    padding-top: 80px;
+  }
+
   &__title {
     font-family: "VerveineRegular";
     font-size: 38px;
@@ -34,6 +38,7 @@
 
     &::-webkit-scrollbar {
       display: none;
+      scrollbar-width: none;
     }
 
     .react-tabs__tab {

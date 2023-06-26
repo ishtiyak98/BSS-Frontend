@@ -57,13 +57,73 @@ function TabInfo() {
             </div>
           </TabPanel>
           <TabPanel>
-            <div>Any content 2</div>
+            <div className="tabInfo">
+              <p className="tabInfo__text">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus
+                enim quas voluptatum aliquam eius commodi. Dicta vitae
+                consectetur ducimus aliquid mollitia, reprehenderit quo nisi.
+              </p>
+              <div className="tabInfo__Img">
+                <img
+                  src={TabImgLg}
+                  alt="tabInfoImgLg"
+                  className="hidden lg:block tabInfo__Img--lg"
+                />
+                <img
+                  src={TabImgSm}
+                  alt="tabInfoImgSm"
+                  className="block lg:hidden tabInfo__Img--sm"
+                />
+              </div>
+            </div>
           </TabPanel>
           <TabPanel>
-            <div>Any content 3</div>
+            <div className="tabInfo">
+              <p className="tabInfo__text">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus
+                enim quas voluptatum aliquam eius commodi. Dicta vitae
+                consectetur ducimus aliquid mollitia, reprehenderit quo nisi
+                laborum officiis Minus eum debitis vel ipsum accusamus dolorum
+                vero quisquam atque.
+              </p>
+              <div className="tabInfo__Img">
+                <img
+                  src={TabImgLg}
+                  alt="tabInfoImgLg"
+                  className="hidden lg:block tabInfo__Img--lg"
+                />
+                <img
+                  src={TabImgSm}
+                  alt="tabInfoImgSm"
+                  className="block lg:hidden tabInfo__Img--sm"
+                />
+              </div>
+            </div>
           </TabPanel>
           <TabPanel>
-            <div>Any content 4</div>
+            <div className="tabInfo">
+              <p className="tabInfo__text">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus
+                enim quas voluptatum aliquam eius commodi. Dicta vitae
+                consectetur ducimus aliquid mollitia, reprehenderit quo nisi
+                laborum officiis Minus eum debitis vel ipsum accusamus dolorum
+                vero quisquam atque. Voluptas repellendus repellat possimus
+                tempore, quisquam numquam nihil. Nemo, adipisci libero! Minus
+                eum debitis vel ipsum accusamus.
+              </p>
+              <div className="tabInfo__Img">
+                <img
+                  src={TabImgLg}
+                  alt="tabInfoImgLg"
+                  className="hidden lg:block tabInfo__Img--lg"
+                />
+                <img
+                  src={TabImgSm}
+                  alt="tabInfoImgSm"
+                  className="block lg:hidden tabInfo__Img--sm"
+                />
+              </div>
+            </div>
           </TabPanel>
         </Tabs>
       </div>
