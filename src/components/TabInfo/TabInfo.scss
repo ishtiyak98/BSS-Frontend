@@ -32,13 +32,14 @@
     justify-content: space-between;
     padding: 0px 0px;
     overflow-x: scroll;
+
     @include lg {
       padding: 0px 160px;
     }
 
     &::-webkit-scrollbar {
       display: none;
-      scrollbar-width: none;
+      width: 0px !important;
     }
 
     .react-tabs__tab {
