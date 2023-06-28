@@ -118,4 +118,35 @@
       }
     }
   }
+
+  .accordion {
+    font-family: "Open Sans", sans-serif;
+
+    .accordion__heading {
+      font-weight: 600;
+      font-size: 18px;
+
+      .accordion__button {
+        &:hover {
+          color: white;
+          background-color: #00bfb2;
+        }
+      }
+    }
+
+    .accordion__panel {
+      padding: 10px;
+      .accordion__text {
+        font-size: 16px;
+      }
+      .accordion__Img {
+        width: 50%;
+        margin: 30px auto;
+
+        img {
+          width: 100%;
+        }
+      }
+    }
+  }
 }

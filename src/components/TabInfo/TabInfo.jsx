@@ -4,6 +4,16 @@ import TabImgLg from "../../assets/img/info-lg.png";
 import TabImgSm from "../../assets/img/info-sm.png";
 import "./TabInfo.scss";
 
+import {
+  Accordion,
+  AccordionItem,
+  AccordionItemHeading,
+  AccordionItemButton,
+  AccordionItemPanel,
+  AccordionItemState,
+} from "react-accessible-accordion";
+import "react-accessible-accordion/dist/fancy-example.css";
+
 function TabInfo() {
   return (
     <section className="tab">
@@ -22,7 +32,7 @@ function TabInfo() {
         There are four main phases of clinical studies:
       </p>
       <br />
-      <div>
+      <div className="hidden lg:block">
         <Tabs>
           <TabList className="tab__title__container">
             <Tab>Phase 1</Tab>
@@ -126,6 +136,94 @@ function TabInfo() {
             </div>
           </TabPanel>
         </Tabs>
+      </div>
+      <div className="block lg:hidden accordion">
+        <Accordion allowZeroExpanded preExpanded={["a"]}>
+          <AccordionItem uuid="a">
+            <AccordionItemHeading>
+              <AccordionItemButton>Phase 1</AccordionItemButton>
+            </AccordionItemHeading>
+            <AccordionItemPanel>
+              <div className="accordion__Info">
+                <p className="accordion__text">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Ducimus enim quas voluptatum aliquam eius commodi. Dicta vitae
+                  consectetur ducimus aliquid mollitia, reprehenderit.
+                </p>
+                <div className="accordion__Img">
+                  <img
+                    src={TabImgSm}
+                    alt="tabInfoImgSm"
+                    className="block lg:hidden accordion__Img--sm"
+                  />
+                </div>
+              </div>
+            </AccordionItemPanel>
+          </AccordionItem>
+          <AccordionItem>
+            <AccordionItemHeading>
+              <AccordionItemButton>Phase 2</AccordionItemButton>
+            </AccordionItemHeading>
+            <AccordionItemPanel>
+            <div className="accordion__Info">
+                <p className="accordion__text">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Ducimus enim quas voluptatum aliquam eius commodi. Dicta vitae
+                  consectetur ducimus aliquid mollitia, reprehenderit.
+                </p>
+                <div className="accordion__Img">
+                  <img
+                    src={TabImgSm}
+                    alt="tabInfoImgSm"
+                    className="block lg:hidden accordion__Img--sm"
+                  />
+                </div>
+              </div>
+            </AccordionItemPanel>
+          </AccordionItem>
+          <AccordionItem>
+            <AccordionItemHeading>
+              <AccordionItemButton>Phase 3</AccordionItemButton>
+            </AccordionItemHeading>
+            <AccordionItemPanel>
+            <div className="accordion__Info">
+                <p className="accordion__text">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Ducimus enim quas voluptatum aliquam eius commodi. Dicta vitae
+                  consectetur ducimus aliquid mollitia, reprehenderit.
+                </p>
+                <div className="accordion__Img">
+                  <img
+                    src={TabImgSm}
+                    alt="tabInfoImgSm"
+                    className="block lg:hidden accordion__Img--sm"
+                  />
+                </div>
+              </div>
+            </AccordionItemPanel>
+          </AccordionItem>
+          <AccordionItem>
+            <AccordionItemHeading>
+              <AccordionItemButton>Phase 4</AccordionItemButton>
+            </AccordionItemHeading>
+            <AccordionItemPanel>
+            <div className="accordion__Info">
+                <p className="accordion__text">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Ducimus enim quas voluptatum aliquam eius commodi. Dicta vitae
+                  consectetur ducimus aliquid mollitia, reprehenderit.
+                </p>
+                <div className="accordion__Img">
+                  <img
+                    src={TabImgSm}
+                    alt="tabInfoImgSm"
+                    className="block lg:hidden accordion__Img--sm"
+                  />
+                </div>
+              </div>
+            </AccordionItemPanel>
+          </AccordionItem>
+        </Accordion>
       </div>
     </section>
   );
